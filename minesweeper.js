@@ -2,7 +2,9 @@ let board = [];
 let rows = 8;
 let columns = 8;
 
-let minesCount = 10;
+// Change this variable to change difficulty
+let minesCount = 5;
+
 let minesLocation = []; // "2-2", "3-4", "2-1"
 
 let tilesClicked = 0; //goal to click all tiles except the ones containing mines

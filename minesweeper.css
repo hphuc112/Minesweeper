@@ -69,4 +69,11 @@ body {
     font-size: 30px;
     background-color: lightgray;
     border: none;
+    margin-bottom: 20px;
+}
+
+#help-button{
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
 }
