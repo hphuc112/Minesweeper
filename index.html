@@ -1,22 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Minesweeper</title>
         <link rel="stylesheet" href="minesweeper.css">
-        <script src="minesweeper.js"></script>
     </head>
 
     <body>
-        <h1 style="background-color:lightgray; display: inline-block;">Mines count: <span id="mines-count">0</span></h1>
-        <div id="board"></div>
-        <br>
-        <button id="flag-button">🚩</button>
-        <div>
-            <button>
-                <a id="help-button"target="_blank" rel="noopener noreferrer" href="https://minesweepergame.com/strategy/how-to-play-minesweeper.php">Help</a>
+        <header class="game-header">
+            <div class="stat-box">
+                <span class="stat-label">Mines</span>
+                <span id="mines-count" class="stat-value">0</span>
+            </div>
+            <button id="new-game" type="button" aria-label="New game">🙂</button>
+            <div class="stat-box">
+                <span class="stat-label">Time</span>
+                <span id="timer" class="stat-value">0</span>
+            </div>
+        </header>
+
+        <p id="status" class="status" aria-live="polite"></p>
+
+        <div id="board" role="grid" aria-label="Minesweeper board"></div>
+
+        <div class="controls">
+            <label for="difficulty">Difficulty:</label>
+            <select id="difficulty">
+                <option value="beginner">Beginner (9×9, 10 mines)</option>
+                <option value="intermediate">Intermediate (16×16, 40 mines)</option>
+                <option value="expert">Expert (16×30, 99 mines)</option>
+            </select>
+            <button id="flag-button" type="button" aria-pressed="false" aria-label="Toggle flag mode">🚩</button>
+            <button type="button">
+                <a id="help-button" target="_blank" rel="noopener noreferrer" href="https://minesweepergame.com/strategy/how-to-play-minesweeper.php">Help</a>
             </button>
         </div>
+
+        <script src="minesweeper.js"></script>
     </body>
 </html>
